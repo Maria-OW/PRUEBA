@@ -90,8 +90,8 @@ function listarUsuarios() {
 				fila.innerHTML = `<td>${element.id}</td>
                         <td>${element.nombre}</td>
                         <td>${element.apellido}</td>
-                        <td>${element.email}</td>;
-                        <td>${element.fecha}</td>;
+                        <td>${element.email}</td>
+                        <td>${element.fecha}</td>
                         <td>${element.tema}</td>`;
 				tabla.appendChild(fila);
 			});
