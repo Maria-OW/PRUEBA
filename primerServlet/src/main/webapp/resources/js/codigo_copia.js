@@ -42,7 +42,18 @@ btnBorrar.addEventListener("click", resetearForm);
 
 
 
+/*
+function listarOradores() {
+			event.preventDefault();
 
+			fetch('endpoint', {
+				method: "GET"
+			})
+				.then(response => response.json())
+				.then(data => renderizarTabla(data))
+				.catch(error => console.log("Error al traer los oradores ..." + error))
+
+		}
 
 		function enviarDatos() {
 			event.preventDefault();
@@ -69,3 +80,45 @@ btnBorrar.addEventListener("click", resetearForm);
 			tema.value = '';
 		}
 
+		function renderizarTabla(data) {
+			const tabla = document.getElementById('cuerpoTabla');
+			tabla.innerHTML = '';
+			console.log(data)
+			data.forEach(element => {
+				console.log(element);
+				const fila = document.createElement('tr');
+				fila.innerHTML = `<td>${element.id}</td>
+                        <td>${element.nombre}</td>
+                        <td>${element.apellido}</td>
+                        <td>${element.email}</td>
+                        <td>${element.fecha}</td>
+                        <td>${element.tema}</td>`;
+				tabla.appendChild(fila);
+			});
+		}
+
+		function renderizarCard(data) {
+			const cardContainer = document.getElementById('historial');
+			const cards = cardContainer.getElementsByClassName('card');
+
+			if (cards.length >= 3) {
+				cardContainer.removeChild(cards[0]);
+			}
+
+			data.forEach(element => {
+				const card = document.createElement('div');
+				card.classList.add("card", "text-white", "bg-success", "mb-3", "mr-1");
+				card.style.maxWidth = "18rem";
+
+				card.innerHTML =
+					`<div class="card-header">Usuario guardado</div>
+                    <div class="card-body">
+					<h5 class="card-title">${element.nombre} ${element.apellido} ${element.email} ${element.fecha} ${element.tema}</h5>
+					
+				</div>`;
+
+				cardContainer.appendChild(card);
+			});
+		}
+		
+		*/

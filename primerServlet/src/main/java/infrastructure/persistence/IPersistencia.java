@@ -4,7 +4,6 @@ import java.util.ArrayList;
 
 import modelos.Usuario;
 
-import modelos.Usuario;
 
 public interface IPersistencia {
 	
@@ -14,9 +13,10 @@ public interface IPersistencia {
 	Usuario getUsuarioPorId(String id);
 	
 	Usuario update(Usuario usuario);
+
+	Usuario update(String usuario);
 	
 	void delete(String id);
 
-	Usuario update(String usuario);
 
 }
